@@ -3,7 +3,6 @@ package com.edu.icesi.LibraryManagement.service.impl;
 import com.edu.icesi.LibraryManagement.persistence.model.Author;
 import com.edu.icesi.LibraryManagement.persistence.model.Book;
 import com.edu.icesi.LibraryManagement.persistence.repository.IAuthorRepository;
-import com.edu.icesi.LibraryManagement.persistence.repository.impl.AuthorRepositoryImpl;
 import com.edu.icesi.LibraryManagement.service.IAuthorService;
 import org.springframework.stereotype.Service;
 
