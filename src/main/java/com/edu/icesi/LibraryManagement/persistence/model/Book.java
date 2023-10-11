@@ -17,5 +17,7 @@ public class Book {
     private LocalDate publicationDate;
     private Author author;
 
-
+    public Book(Book book){
+        this(book.getId(), book.getTitle(),book.getPublicationDate(),book.getAuthor());
+    }
 }
