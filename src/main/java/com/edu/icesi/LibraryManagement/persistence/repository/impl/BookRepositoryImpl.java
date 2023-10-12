@@ -1,12 +1,14 @@
 package com.edu.icesi.LibraryManagement.persistence.repository.impl;
 
+import com.edu.icesi.LibraryManagement.persistence.model.Author;
 import com.edu.icesi.LibraryManagement.persistence.model.Book;
-import com.edu.icesi.LibraryManagement.service.IBookRepository;
+import com.edu.icesi.LibraryManagement.persistence.repository.IBookRepository;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class BookRepositoryImpl implements IBookRepository {
 
@@ -65,4 +67,10 @@ public class BookRepositoryImpl implements IBookRepository {
         }
         return flag;
     }
+    @Override
+    public List<Book> getBooksbyAuthor(Long idAuthor) {
+        return books.stream().filter(p -> p.getAuthor().getId() == idAuthor).collect(Collectors.toList());
+    }
+
+
 }

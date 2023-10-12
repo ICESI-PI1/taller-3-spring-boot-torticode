@@ -14,8 +14,6 @@ public class AuthorRepositoryImpl implements IAuthorRepository {
 
     List<Author> authors = new ArrayList<>();
 
-
-
     public AuthorRepositoryImpl(){};
 
     @Override
@@ -67,8 +65,5 @@ public class AuthorRepositoryImpl implements IAuthorRepository {
         return flag;
     }
 
-    @Override
-    public List<Book> getBookOfAuthor(Long id) {
-        return null;
-    }
+
 }
