@@ -1,5 +1,6 @@
 package com.edu.icesi.LibraryManagement.persistence.repository;
 
+import com.edu.icesi.LibraryManagement.persistence.model.Author;
 import com.edu.icesi.LibraryManagement.persistence.model.Book;
 
 import java.util.List;
@@ -12,5 +13,6 @@ public interface IBookRepository{
     Book saveBook(Book book);
     Boolean uploadBook(Long id,Book book);
     Boolean deleteBook(Long id);
+    List<Book> getBooksbyAuthor(Long idAuthor);
 
 }

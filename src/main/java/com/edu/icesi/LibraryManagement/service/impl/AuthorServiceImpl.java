@@ -43,8 +43,4 @@ public class AuthorServiceImpl implements IAuthorService {
         return authorRepository.deleteAuthor(id);
     }
 
-    @Override
-    public List<Book> getBookOfAuthor(Long id) {
-        return authorRepository.getBookOfAuthor(id);
-    }
 }

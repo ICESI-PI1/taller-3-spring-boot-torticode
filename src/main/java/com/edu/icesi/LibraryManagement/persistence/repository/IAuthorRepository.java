@@ -12,5 +12,5 @@ public interface IAuthorRepository {
     Author saveAuthor(Author author);
     Boolean uploadAuthor(Long id, Author author);
     Boolean deleteAuthor(Long id);
-    List<Book> getBookOfAuthor(Long id);
+
 }

@@ -1,37 +1,45 @@
 package com.edu.icesi.LibraryManagement.service.impl;
 
+import com.edu.icesi.LibraryManagement.persistence.model.Author;
 import com.edu.icesi.LibraryManagement.persistence.model.Book;
-import com.edu.icesi.LibraryManagement.service.IBookRepository;
+import com.edu.icesi.LibraryManagement.persistence.repository.IBookRepository;
+import com.edu.icesi.LibraryManagement.service.IBookService;
 
 import java.util.List;
 import java.util.Optional;
 
-public class BookServiceImpl implements IBookRepository {
+public class BookServiceImpl implements IBookService {
 
+    IBookRepository bookRepository;
 
-
+    public BookServiceImpl(IBookRepository bookRepository){
+        this.bookRepository=bookRepository;
+    }
     @Override
     public List<Book> getAllBooks() {
-        return null;
+        return bookRepository.getAllBooks();
     }
 
     @Override
     public Optional<Book> findById(Long id) {
-        return Optional.empty();
+        return bookRepository.findById(id);
     }
 
     @Override
     public Book saveBook(Book book) {
-        return null;
+        return bookRepository.saveBook(book);
     }
 
     @Override
     public Boolean uploadBook(Long id, Book book) {
-        return null;
+        return bookRepository.uploadBook(id,book);
     }
-
     @Override
     public Boolean deleteBook(Long id) {
-        return null;
+        return bookRepository.deleteBook(id);
+    }
+    @Override
+    public List<Book> getBooksbyAuthor(Long idAuthor) {
+        return bookRepository.getBooksbyAuthor(idAuthor);
     }
 }
