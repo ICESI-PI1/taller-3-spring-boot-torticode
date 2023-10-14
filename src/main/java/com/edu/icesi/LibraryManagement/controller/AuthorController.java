@@ -19,6 +19,14 @@ public class AuthorController {
     public AuthorController(IAuthorService authorService, IBookService bookService) {
         this.authorService = authorService;
         this.bookService = bookService;
+
+        Author author1= new Author(1L,"Carlos","Espanya");
+        Author author2= new Author(2L,"Victor","Espanya");
+        Author author3= new Author(3L,"Danna","Colombia");
+
+        authorService.saveAuthor(author1);
+        authorService.saveAuthor(author2);
+        authorService.saveAuthor(author3);
     }
     @GetMapping("/autores")
     public List<Author> showAllAuthor(){

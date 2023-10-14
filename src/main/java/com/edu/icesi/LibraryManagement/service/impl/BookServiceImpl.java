@@ -4,10 +4,12 @@ import com.edu.icesi.LibraryManagement.persistence.model.Author;
 import com.edu.icesi.LibraryManagement.persistence.model.Book;
 import com.edu.icesi.LibraryManagement.persistence.repository.IBookRepository;
 import com.edu.icesi.LibraryManagement.service.IBookService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class BookServiceImpl implements IBookService {
 
     IBookRepository bookRepository;

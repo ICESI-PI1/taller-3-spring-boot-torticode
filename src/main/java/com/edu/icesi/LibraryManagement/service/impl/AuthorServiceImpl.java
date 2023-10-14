@@ -4,6 +4,7 @@ import com.edu.icesi.LibraryManagement.persistence.model.Author;
 import com.edu.icesi.LibraryManagement.persistence.model.Book;
 import com.edu.icesi.LibraryManagement.persistence.repository.IAuthorRepository;
 import com.edu.icesi.LibraryManagement.service.IAuthorService;
+import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
