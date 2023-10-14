@@ -3,13 +3,14 @@ package com.edu.icesi.LibraryManagement.persistence.repository.impl;
 import com.edu.icesi.LibraryManagement.persistence.model.Author;
 import com.edu.icesi.LibraryManagement.persistence.model.Book;
 import com.edu.icesi.LibraryManagement.persistence.repository.IBookRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Optional;
 import java.util.stream.Collectors;
-
+@Repository
 public class BookRepositoryImpl implements IBookRepository {
 
     List<Book> books = new ArrayList<>();
