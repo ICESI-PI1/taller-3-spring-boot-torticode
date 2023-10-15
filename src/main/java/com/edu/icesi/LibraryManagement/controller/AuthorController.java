@@ -4,9 +4,11 @@ import com.edu.icesi.LibraryManagement.persistence.model.Author;
 import com.edu.icesi.LibraryManagement.persistence.model.Book;
 import com.edu.icesi.LibraryManagement.service.IAuthorService;
 import com.edu.icesi.LibraryManagement.service.IBookService;
+import org.springframework.cglib.core.Local;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @RestController
@@ -24,9 +26,19 @@ public class AuthorController {
         Author author2= new Author(2L,"Victor","Espanya");
         Author author3= new Author(3L,"Danna","Colombia");
 
+        Book book1 = new Book(1L,"Método dorfman", LocalDate.of(2003,02,26),author1);
+        Book book2 = new Book(2L,"Casos de uso",LocalDate.of(2007,06,17),author1);
+        Book book3 = new Book(3L,"Steven Universe", LocalDate.of(2014,10,02),author1);
+        Book book4 = new Book(4L,"Miraculous",LocalDate.of(2016,12,03),author1);
+
         authorService.saveAuthor(author1);
         authorService.saveAuthor(author2);
         authorService.saveAuthor(author3);
+
+        bookService.saveBook(book1);
+        bookService.saveBook(book2);
+        bookService.saveBook(book3);
+        bookService.saveBook(book4);
     }
     @GetMapping("/autores")
     public List<Author> showAllAuthor(){
@@ -50,8 +62,9 @@ public class AuthorController {
         return authorService.deleteAuthor(id);
     }
 
-    @GetMapping("/autores/{id}/libros")
+    @GetMapping("/autores/{idAuthor}/libros")
     public List<Book> showBooksByAuthor(@PathVariable Long idAuthor){
+        System.out.println(bookService.getBooksbyAuthor(idAuthor));
         return bookService.getBooksbyAuthor(idAuthor);
     }
 
