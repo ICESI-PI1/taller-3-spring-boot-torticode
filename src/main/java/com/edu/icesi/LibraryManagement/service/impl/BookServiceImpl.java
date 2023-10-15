@@ -42,6 +42,7 @@ public class BookServiceImpl implements IBookService {
     }
     @Override
     public List<Book> getBooksbyAuthor(Long idAuthor) {
+        System.out.println(bookRepository.getBooksbyAuthor(idAuthor));
         return bookRepository.getBooksbyAuthor(idAuthor);
     }
 }
