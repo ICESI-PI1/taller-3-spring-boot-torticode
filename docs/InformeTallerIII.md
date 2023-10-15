@@ -59,13 +59,11 @@ Para cumplir con estos requerimientos, la aplicación se estructuró siguiendo e
 Siga estos pasos para ejecutar la aplicación:
 
 1. Clonar el Repositorio:
-"""
 
-'''
-git clone https://github.com/ICESI-PI1/taller-3-spring-boot-torticode.git
-'''
+<pre>
+    git clone https://github.com/ICESI-PI1/taller-3-spring-boot-torticode.git    
+</pre>
 
-"""
 2. Abra el proyecto en su IDE preferido (sugerimos IntelliJ IDEA )
 3. Ejecute la aplicación Spring Boot haciendo click en el botón "Run" (usando Maven)
 3.La aplicación se iniciará en un servidor embebido y estará escuchando en el puerto predeterminado (generalmente el puerto 8080).
@@ -82,17 +80,15 @@ Método: POST
 URL: http://localhost:8080/(el url que está en AuthorController)
 
 Cuerpo (Body): JSON con los datos del autor, por ejemplo:
-"""
 
-'''
-{
-    "name": "Nombre del Autor",
-    "nationality": "Nacionalidad del Autor"
-}
+<pre>
+    {
+        "id": identificador del Autor
+        "name": "Nombre del Autor",
+        "nationality": "Nacionalidad del Autor"
+    }     
+</pre>
 
-'''
-
-"""
 Click en "Send" para crear un nuevo autor
 
 **Listar Todos los Autores**
@@ -122,17 +118,17 @@ URL: http://localhost:8080/(el url que está en AuthorController)
 Reemplaza {id} con el ID del autor que deseas actualizar.
 
 Cuerpo (Body): JSON con los datos actualizados del autor, por ejemplo:
-"""
 
-'''
-{
-    "name": "Nuevo Nombre del Autor",
-    "nationality": "Nueva Nacionalidad del Autor"
-}
+<pre>
+    
+    {
+        "id": identificador del Autor
+        "name": "Nuevo Nombre del Autor",
+        "nationality": "Nueva Nacionalidad del Autor"
+    }
+</pre>
 
-'''
 
-"""
 Haz clic en "Send" para actualizar el autor.
 
 **Eliminar un Autor**
